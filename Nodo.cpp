@@ -3,3 +3,28 @@
 //
 
 #include "Nodo.h"
+
+Nodo::Nodo() {}
+
+Nodo::Nodo(const Libro &libro, Nodo *siguiente) : libro(libro), siguiente(siguiente) {}
+
+const Libro &Nodo::getLibro() const {
+    return libro;
+}
+
+void Nodo::setLibro(const Libro &libro) {
+    Nodo::libro = libro;
+}
+
+Nodo *Nodo::getSiguiente() const {
+    return siguiente;
+}
+
+void Nodo::setSiguiente(Nodo *siguiente) {
+    Nodo::siguiente = siguiente;
+}
+
+string Nodo::toString() {
+
+    return libro.toString();
+}
