@@ -4,25 +4,23 @@
 
 #ifndef LAB_6_LISTAS_ENLAZADAS_LIBRO_H
 #define LAB_6_LISTAS_ENLAZADAS_LIBRO_H
-
+#include <string>
 #include "iostream"
 using namespace std;
 
 class Libro {
 
-private:
-
      string titulo;
      string autor;
      string editorial;
-     int año;
+     int anno;
      int isbn;
 
 public:
 
     Libro();
 
-    Libro(const string &titulo, const string &autor, const string &editorial, int año, int isbn);
+    Libro(const string &titulo, const string &autor, const string &editorial, int anno, int isbn);
 
     const string &getTitulo() const;
 
@@ -36,9 +34,9 @@ public:
 
     void setEditorial(const string &editorial);
 
-    int getAño() const;
+    int getAnno() const;
 
-    void setAño(int año);
+    void setAnno(int anno);
 
     int getIsbn() const;
 

@@ -10,8 +10,6 @@ using namespace std;
 
 class Nodo {
 
-private:
-
     Libro libro;
     Nodo *siguiente;
 

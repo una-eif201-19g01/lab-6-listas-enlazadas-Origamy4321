@@ -6,11 +6,11 @@
 
 Libro::Libro() {}
 
-Libro::Libro(const string &titulo, const string &autor, const string &editorial, int año, int isbn) : titulo(titulo),
+Libro::Libro(const string &titulo, const string &autor, const string &editorial, int anno, int isbn) : titulo(titulo),
                                                                                                       autor(autor),
                                                                                                       editorial(
                                                                                                               editorial),
-                                                                                                      año(año),
+                                                                                                      anno(anno),
                                                                                                       isbn(isbn) {}
 
 const string &Libro::getTitulo() const {
@@ -37,12 +37,12 @@ void Libro::setEditorial(const string &editorial) {
     Libro::editorial = editorial;
 }
 
-int Libro::getAño() const {
-    return año;
+int Libro::getAnno() const {
+    return anno;
 }
 
-void Libro::setAño(int año) {
-    Libro::año = año;
+void Libro::setAnno(int anno) {
+    Libro::anno = anno;
 }
 
 int Libro::getIsbn() const {
@@ -58,7 +58,7 @@ string Libro::toString() {
     string reporte;
 
     reporte = +"Titulo del libro: " + getAutor() + "\n" + "el autor del libro es : " + getAutor() + "\n" +
-              "el año de publicacion del libro es:  " + to_string(getAño()) + "\n" + "el codigo ISBN del libro es: " +
+              "el año de publicacion del libro es:  " + to_string(getAnno()) + "\n" + "el codigo ISBN del libro es: " +
               to_string(getIsbn()) + "\n";
 
     return reporte;

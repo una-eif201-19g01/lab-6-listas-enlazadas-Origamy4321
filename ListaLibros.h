@@ -11,7 +11,6 @@ using namespace std;
 
 class ListaLibros {
 
-private:
 
     Nodo *primero;
     Nodo *actual;
@@ -34,11 +33,13 @@ public:
 
     void insertarFinal(Libro &_libro);
 
-    void eliminarFinal();
+    bool eliminarFinal();
 
     bool encuentraLibro(int);
 
     string obtenerNombreLibro(int);
+
+    int totalNodos();
 
 
 };

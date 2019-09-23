@@ -14,11 +14,11 @@ ListaLibros::~ListaLibros() {
     while (primero != nullptr) {
         actual = primero;
         primero = primero->getSiguiente();
-        delete(actual);
+        delete (actual);
     }
 }
 
-Nodo *ListaLibros::getPrimero() const{
+Nodo *ListaLibros::getPrimero() const {
     return primero;
 }
 
@@ -37,21 +37,81 @@ void ListaLibros::setActual(Nodo *actual) {
 void ListaLibros::insertarFinal(Libro &_libro) {
 
     actual = primero;
-    if(primero == nullptr){
+    if (primero == nullptr) {
+        primero = new Nodo(_libro, nullptr);
+    } else {
+        while (actual->getSiguiente() != nullptr)
+            actual = actual->getSiguiente();
+    }
+    actual->setSiguiente(new Nodo(_libro, nullptr));
+}
+
+bool ListaLibros::eliminarFinal() {
+    actual = primero;
+    if (primero == nullptr) {
+        return false;
+    } else {
+        while (actual->getSiguiente() != nullptr) {
+            actual = actual->getSiguiente();
+        }
+        delete actual;
+    }
+
+
+}
+
+bool ListaLibros::encuentraLibro(int n) {
+
+    actual = primero;
+    while (actual != NULL){
+        if(n == actual->getLibro().getIsbn()){
+            return true;}
+
+        else{
+            actual->getSiguiente();
+        }
+    } return false;
+}
+
+string ListaLibros::obtenerNombreLibro(int n) {
+
+    actual = primero;
+    while(actual !=NULL){
+        if(n == actual->getLibro().getIsbn())
+            return actual->getLibro().getTitulo();
+        else
+            actual->getSiguiente();}
+
+    return "No se ha encontrado el libro";
+
+}
+
+string ListaLibros::toString() {
+
+    string reporte;
+    actual = primero;
+
+    while (actual != nullptr){
+
+        reporte += actual->toString();
+        actual = actual->getSiguiente();
 
 
     }
 
+
+    return reporte;
 }
 
-void ListaLibros::eliminarFinal() {
+int ListaLibros::totalNodos() {
 
-}
+    int totalNodos = 0;
+    actual = primero;
 
-bool ListaLibros::encuentraLibro(int) {
-    return false;
-}
+    while (actual != nullptr) {
+        totalNodos ++;
+        actual = actual->getSiguiente();
+    }
 
-string ListaLibros::obtenerNombreLibro(int) {
-    return std::__cxx11::string();
+    return totalNodos;
 }
