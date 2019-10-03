@@ -57,9 +57,9 @@ string Libro::toString() {
 
     string reporte;
 
-    reporte = +"Titulo del libro: " + getAutor() + "\n" + "el autor del libro es : " + getAutor() + "\n" +
-              "el año de publicacion del libro es:  " + to_string(getAnno()) + "\n" + "el codigo ISBN del libro es: " +
-              to_string(getIsbn()) + "\n";
+    reporte = +"Titulo del libro: " + titulo + "\n" + "el autor del libro es : " + autor + "\n" +
+              "el año de publicacion del libro es:  " + to_string(anno) + "\n" + "el codigo ISBN del libro es: " +
+              to_string(isbn) + "\n";
 
     return reporte;
 }

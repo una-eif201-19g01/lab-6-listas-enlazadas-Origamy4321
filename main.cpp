@@ -4,8 +4,8 @@
 
 int main() {
 
-    Libro libro1("Taco Ghoul", "Alvin Yakitori", "shueisha", 2018, 001);
-    Libro libro2("Las aventuras de Juanita la santa", "obo", "skynet", 2018, 002);
+    Libro libro1("Tokyo Ghoul", "Pato", "shueisha", 2018, 001);
+    Libro libro2("Las aventuras de Juanita la santa", "kethcu", "skynet", 2018, 002);
     Libro libro3("Citizen", "Dinamo", "China", 2000, 003);
 
     ListaLibros *listaLibros = new ListaLibros();
